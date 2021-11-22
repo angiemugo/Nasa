@@ -24,7 +24,6 @@
 		FD87ECF8274A9B2C00EFBF0C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD87ECF7274A9B2C00EFBF0C /* BaseViewController.swift */; };
 		FD87ECFA274A9C4600EFBF0C /* ControllerIds.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD87ECF9274A9C4600EFBF0C /* ControllerIds.swift */; };
 		FD87ECFC274A9CD000EFBF0C /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD87ECFB274A9CD000EFBF0C /* ImageDetailViewController.swift */; };
-		FD87ED00274A9D0400EFBF0C /* ImageDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD87ECFF274A9D0400EFBF0C /* ImageDetailViewModel.swift */; };
 		FD87ED02274A9D3400EFBF0C /* ImageDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD87ED01274A9D3400EFBF0C /* ImageDetailViewController.xib */; };
 		FD87ED05274AA55900EFBF0C /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD87ED04274AA55900EFBF0C /* APIClient.swift */; };
 		FD87ED08274AA59800EFBF0C /* NasaErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD87ED07274AA59800EFBF0C /* NasaErrors.swift */; };
@@ -34,6 +33,14 @@
 		FD87ED12274AAD9900EFBF0C /* APIMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD87ED11274AAD9900EFBF0C /* APIMethod.swift */; };
 		FD87ED14274AADA600EFBF0C /* RemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD87ED13274AADA600EFBF0C /* RemoteDataSource.swift */; };
 		FD87ED16274AADBB00EFBF0C /* URLRequest+Nasa.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD87ED15274AADBB00EFBF0C /* URLRequest+Nasa.swift */; };
+		FD8EA830274B9C2A00D7A11D /* UIImageView+Nasa.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8EA82F274B9C2A00D7A11D /* UIImageView+Nasa.swift */; };
+		FD8EA832274B9C6300D7A11D /* UITableViewCell+Nasa.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8EA831274B9C6300D7A11D /* UITableViewCell+Nasa.swift */; };
+		FD8EA834274B9C7700D7A11D /* UIViewController+Nasa.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8EA833274B9C7700D7A11D /* UIViewController+Nasa.swift */; };
+		FD8EA838274B9EE600D7A11D /* UIView+Nasa.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8EA837274B9EE600D7A11D /* UIView+Nasa.swift */; };
+		FD8EA83A274B9F1400D7A11D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8EA839274B9F1400D7A11D /* LoadingView.swift */; };
+		FD8EA83C274BA5E200D7A11D /* UITableView+Nasa.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8EA83B274BA5E200D7A11D /* UITableView+Nasa.swift */; };
+		FD9812C9274BBAF5002AB1FA /* NasaCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9812C8274BBAF5002AB1FA /* NasaCoordinator.swift */; };
+		FD9812CB274BBB90002AB1FA /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9812CA274BBB90002AB1FA /* DataSource.swift */; };
 		FDC37A2CD0F98B9F4A264947 /* Pods_NasaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB39B745A907CC601D420558 /* Pods_NasaTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,7 +90,6 @@
 		FD87ECF7274A9B2C00EFBF0C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		FD87ECF9274A9C4600EFBF0C /* ControllerIds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerIds.swift; sourceTree = "<group>"; };
 		FD87ECFB274A9CD000EFBF0C /* ImageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewController.swift; sourceTree = "<group>"; };
-		FD87ECFF274A9D0400EFBF0C /* ImageDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewModel.swift; sourceTree = "<group>"; };
 		FD87ED01274A9D3400EFBF0C /* ImageDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageDetailViewController.xib; sourceTree = "<group>"; };
 		FD87ED04274AA55900EFBF0C /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		FD87ED07274AA59800EFBF0C /* NasaErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaErrors.swift; sourceTree = "<group>"; };
@@ -93,6 +99,14 @@
 		FD87ED11274AAD9900EFBF0C /* APIMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIMethod.swift; sourceTree = "<group>"; };
 		FD87ED13274AADA600EFBF0C /* RemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSource.swift; sourceTree = "<group>"; };
 		FD87ED15274AADBB00EFBF0C /* URLRequest+Nasa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Nasa.swift"; sourceTree = "<group>"; };
+		FD8EA82F274B9C2A00D7A11D /* UIImageView+Nasa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Nasa.swift"; sourceTree = "<group>"; };
+		FD8EA831274B9C6300D7A11D /* UITableViewCell+Nasa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Nasa.swift"; sourceTree = "<group>"; };
+		FD8EA833274B9C7700D7A11D /* UIViewController+Nasa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Nasa.swift"; sourceTree = "<group>"; };
+		FD8EA837274B9EE600D7A11D /* UIView+Nasa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Nasa.swift"; sourceTree = "<group>"; };
+		FD8EA839274B9F1400D7A11D /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		FD8EA83B274BA5E200D7A11D /* UITableView+Nasa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Nasa.swift"; sourceTree = "<group>"; };
+		FD9812C8274BBAF5002AB1FA /* NasaCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaCoordinator.swift; sourceTree = "<group>"; };
+		FD9812CA274BBB90002AB1FA /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +185,7 @@
 		FD87ECB5274A705800EFBF0C /* Nasa */ = {
 			isa = PBXGroup;
 			children = (
+				FD8EA82E274B9C1600D7A11D /* Extensions */,
 				FD87ED06274AA58300EFBF0C /* Models */,
 				FD87ED03274AA1B800EFBF0C /* Networking  */,
 				FD87ECFD274A9CE100EFBF0C /* ImageDetail */,
@@ -182,6 +197,8 @@
 				FD87ECF5274A9B2100EFBF0C /* BaseViewModel.swift */,
 				FD87ECF7274A9B2C00EFBF0C /* BaseViewController.swift */,
 				FD87ECF9274A9C4600EFBF0C /* ControllerIds.swift */,
+				FD8EA839274B9F1400D7A11D /* LoadingView.swift */,
+				FD9812C8274BBAF5002AB1FA /* NasaCoordinator.swift */,
 			);
 			path = Nasa;
 			sourceTree = "<group>";
@@ -226,7 +243,6 @@
 		FD87ECFD274A9CE100EFBF0C /* ImageDetail */ = {
 			isa = PBXGroup;
 			children = (
-				FD87ECFF274A9D0400EFBF0C /* ImageDetailViewModel.swift */,
 				FD87ECFB274A9CD000EFBF0C /* ImageDetailViewController.swift */,
 				FD87ED01274A9D3400EFBF0C /* ImageDetailViewController.xib */,
 			);
@@ -241,6 +257,7 @@
 				FD87ED11274AAD9900EFBF0C /* APIMethod.swift */,
 				FD87ED13274AADA600EFBF0C /* RemoteDataSource.swift */,
 				FD87ED15274AADBB00EFBF0C /* URLRequest+Nasa.swift */,
+				FD9812CA274BBB90002AB1FA /* DataSource.swift */,
 			);
 			path = "Networking ";
 			sourceTree = "<group>";
@@ -253,6 +270,18 @@
 				FD87ED0D274AA64C00EFBF0C /* NasaUIModels.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		FD8EA82E274B9C1600D7A11D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FD8EA82F274B9C2A00D7A11D /* UIImageView+Nasa.swift */,
+				FD8EA831274B9C6300D7A11D /* UITableViewCell+Nasa.swift */,
+				FD8EA833274B9C7700D7A11D /* UIViewController+Nasa.swift */,
+				FD8EA837274B9EE600D7A11D /* UIView+Nasa.swift */,
+				FD8EA83B274BA5E200D7A11D /* UITableView+Nasa.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -496,22 +525,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD87ED00274A9D0400EFBF0C /* ImageDetailViewModel.swift in Sources */,
 				FD87ED16274AADBB00EFBF0C /* URLRequest+Nasa.swift in Sources */,
 				FD87ECEE274A9A2900EFBF0C /* ImagesListViewController.swift in Sources */,
+				FD8EA83A274B9F1400D7A11D /* LoadingView.swift in Sources */,
 				FD87ED08274AA59800EFBF0C /* NasaErrors.swift in Sources */,
 				FD87ECF6274A9B2100EFBF0C /* BaseViewModel.swift in Sources */,
 				FD87ED05274AA55900EFBF0C /* APIClient.swift in Sources */,
+				FD9812C9274BBAF5002AB1FA /* NasaCoordinator.swift in Sources */,
 				FD87ECFA274A9C4600EFBF0C /* ControllerIds.swift in Sources */,
 				FD87ECEA274A95D900EFBF0C /* ImagesCell.swift in Sources */,
 				FD87ED10274AAD8400EFBF0C /* APIEndpoint.swift in Sources */,
 				FD87ED14274AADA600EFBF0C /* RemoteDataSource.swift in Sources */,
+				FD8EA832274B9C6300D7A11D /* UITableViewCell+Nasa.swift in Sources */,
 				FD87ECF4274A9AE700EFBF0C /* ImagesListViewModel.swift in Sources */,
+				FD8EA830274B9C2A00D7A11D /* UIImageView+Nasa.swift in Sources */,
+				FD8EA834274B9C7700D7A11D /* UIViewController+Nasa.swift in Sources */,
 				FD87ECB7274A705800EFBF0C /* AppDelegate.swift in Sources */,
+				FD8EA838274B9EE600D7A11D /* UIView+Nasa.swift in Sources */,
 				FD87ED0C274AA61A00EFBF0C /* NasaResponseModel.swift in Sources */,
 				FD87ED12274AAD9900EFBF0C /* APIMethod.swift in Sources */,
+				FD8EA83C274BA5E200D7A11D /* UITableView+Nasa.swift in Sources */,
 				FD87ECF8274A9B2C00EFBF0C /* BaseViewController.swift in Sources */,
 				FD87ED0E274AA64C00EFBF0C /* NasaUIModels.swift in Sources */,
+				FD9812CB274BBB90002AB1FA /* DataSource.swift in Sources */,
 				FD87ECFC274A9CD000EFBF0C /* ImageDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -688,7 +724,6 @@
 				INFOPLIST_FILE = Nasa/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -716,7 +751,6 @@
 				INFOPLIST_FILE = Nasa/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

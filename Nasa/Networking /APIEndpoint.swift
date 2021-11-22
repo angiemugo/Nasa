@@ -8,5 +8,5 @@
 import Foundation
 
 public enum APIEndpoint: String {
-    case search = ""
+    case search = "search"
 }

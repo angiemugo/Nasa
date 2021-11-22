@@ -43,7 +43,7 @@ final class APIClient: APIClientProtocol {
                     print("This is the error: \(statusCode)")
                 }
             }, onFailure: { _ in
-                errorHandler(.timeOut)
+                errorHandler(.timeout)
             })
     }
 
@@ -52,6 +52,8 @@ final class APIClient: APIClientProtocol {
                                               _ responseHandler: @escaping (T) -> Void) {
         do {
             let decoder = JSONDecoder()
+            decoder.dateDecodingStrategy = .formatted(Formatter.iso8601)
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
             responseHandler(try decoder.decode(T.self, from: data))
         } catch {
             print("This is the error: \(error), \(T.self)")

@@ -9,7 +9,7 @@ import Foundation
 
 extension URLRequest {
     init(_ endpoint: APIEndpoint, _ method: APIMethod = .get, _ parameters: [String: Any?]? = nil) {
-        let baseURL = URL(string: "https://swapi.dev/")!
+        let baseURL = URL(string: "https://images-api.nasa.gov/")!
         let path = String(format: endpoint.rawValue)
         let urlString = "\(baseURL)\(path)"
         let url = URL(string: urlString)!

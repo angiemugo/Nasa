@@ -5,10 +5,12 @@
 //  Created by Angie Mugo on 21/11/2021.
 //
 
-import Foundation
 import UIKit
+import RxCocoa
+import RxSwift
 
 class BaseViewController: UIViewController {
+    var disposeBag = DisposeBag()
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -17,13 +19,5 @@ class BaseViewController: UIViewController {
     @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-    }
-
-    func showError(_ error: Error, _ handler: ()-> Void) {
-
-    }
-
-    func showLoading(_ show: Bool) {
-
     }
 }

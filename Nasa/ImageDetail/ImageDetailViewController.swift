@@ -8,18 +8,27 @@
 import UIKit
 
 final class ImageDetailViewController: BaseViewController {
-    private let viewModel: ImageDetailViewModel
+    @IBOutlet private var nasaImage: UIImageView!
+    @IBOutlet private var titleLabel: UILabel!
+    @IBOutlet private var subtitleLabel: UILabel!
+    @IBOutlet private var descriptionLabel: UILabel!
+    private let model: UIModel
 
-    init(_ viewModel: ImageDetailViewModel) {
-        self.viewModel = viewModel
-        super.init(nibName: ControllerIds.imageDetailViewModel.rawValue, bundle: Bundle.main)
+    init(_ model: UIModel) {
+        self.model = model
+        super.init(nibName: ControllerIds.imageDetailViewController.rawValue, bundle: Bundle.main)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
     }
 
     func setup() {
-        
+        guard let url = URL(string: model.imageUrl) else { return }
+        nasaImage.setImage(url)
+        titleLabel.text = model.title
+        subtitleLabel.text = model.subtitle
+        descriptionLabel.text = model.description
     }
 }

@@ -8,11 +8,14 @@
 import UIKit
 
 final class ImageCell: UITableViewCell {
+    @IBOutlet private weak var nasaImage: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var descLabel: UILabel!
+    @IBOutlet private weak var subtitleLabel: UILabel!
 
-    func configure() {
-        titleLabel.text = "ARC-2002-ACD02-0056-22"
-        descLabel.text = "Tom Trower  |  20 Mar, 2002"
+    func configureCell(_ model: UIModel) {
+        guard let url = URL(string: model.imageUrl) else { return }
+        nasaImage.setImage(url)
+        titleLabel.text = model.title
+        subtitleLabel.text = model.subtitle
     }
 }

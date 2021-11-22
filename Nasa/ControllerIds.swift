@@ -9,7 +9,7 @@ import Foundation
 
 enum ControllerIds: String {
     case imagesListViewController = "ImagesListViewController"
-    case imageDetailViewModel = "ImageDetailViewModel"
+    case imageDetailViewController = "ImageDetailViewController"
 }
 
 enum ViewIds: String {
