@@ -20,17 +20,17 @@ class LoadingView: UIView {
 
     private func configureView() {
         backgroundColor = .white
-        let acitivyIndicatorView = UIActivityIndicatorView(style: .gray)
-        acitivyIndicatorView.hidesWhenStopped = true
-        acitivyIndicatorView.style = .medium
-        acitivyIndicatorView.color = .darkGray
-        acitivyIndicatorView.startAnimating()
-        acitivyIndicatorView.translatesAutoresizingMaskIntoConstraints = false
+        let activityIndicatorView = UIActivityIndicatorView(style: .medium)
+        activityIndicatorView.hidesWhenStopped = true
+        activityIndicatorView.style = .medium
+        activityIndicatorView.color = .darkGray
+        activityIndicatorView.startAnimating()
+        activityIndicatorView.translatesAutoresizingMaskIntoConstraints = false
         translatesAutoresizingMaskIntoConstraints = false
-        addSubview(acitivyIndicatorView)
+        addSubview(activityIndicatorView)
         NSLayoutConstraint.activate([
-            acitivyIndicatorView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            acitivyIndicatorView.centerYAnchor.constraint(equalTo: centerYAnchor)
+            activityIndicatorView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            activityIndicatorView.centerYAnchor.constraint(equalTo: centerYAnchor)
             ])
     }
 }

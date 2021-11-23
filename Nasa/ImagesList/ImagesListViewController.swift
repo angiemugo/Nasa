@@ -19,9 +19,14 @@ final class ImagesListViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureTableView()
+        configureView()
         configureObservables()
-        viewModel.fetch()
+        viewModel.fetchItems()
+    }
+
+    private func configureView() {
+        title = "The Milky Way"
+        configureTableView()
     }
     
     private func configureTableView() {
@@ -33,8 +38,8 @@ final class ImagesListViewController: BaseViewController {
         }).disposed(by: disposeBag)
         
         viewModel.items.asObservable().bind(to: tableView
-                                                    .rx
-                                                    .items) { (cell, row, model) in
+                                                .rx
+                                                .items) { (cell, row, model) in
             let indexPath = IndexPath(row: row, section: 0)
             return self.configureTableViewCell(indexPath: indexPath, model: model)
         }.disposed(by: disposeBag)
@@ -56,7 +61,7 @@ final class ImagesListViewController: BaseViewController {
     func configureObservables() {
         viewModel.errorRelay.bind { [weak self] error in
             guard let self = self else { return }
-            self.showError(error, self.viewModel.fetch)
+            self.showError(error, self.viewModel.fetchItems)
         }.disposed(by: disposeBag)
         
         viewModel.loadingRelay.subscribe(onNext: { [weak self] loading in

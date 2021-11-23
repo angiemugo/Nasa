@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		0B1A18B337E24B517456213D /* Pods_Nasa_NasaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3BB08599CF1B0E5388EC2CC /* Pods_Nasa_NasaUITests.framework */; };
 		C824FE6DC2F7D8B4C23197C6 /* Pods_Nasa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BFACCEACC6A106AA3045EC7 /* Pods_Nasa.framework */; };
+		FD76A30F274CE150008F754D /* Items.json in Resources */ = {isa = PBXBuildFile; fileRef = FD76A30E274CE14F008F754D /* Items.json */; };
+		FD76A311274CE252008F754D /* MockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD76A310274CE252008F754D /* MockAPIClient.swift */; };
+		FD76A315274CE3D3008F754D /* JsonLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD76A314274CE3D3008F754D /* JsonLocalDataSource.swift */; };
+		FD76A317274CE539008F754D /* MockRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD76A316274CE539008F754D /* MockRemoteDataSource.swift */; };
+		FD76A31A274CE688008F754D /* TestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD76A319274CE688008F754D /* TestViewModel.swift */; };
+		FD76A31C274CF3FD008F754D /* URLResponse+Nasa.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD76A31B274CF3FD008F754D /* URLResponse+Nasa.swift */; };
 		FD87ECB7274A705800EFBF0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD87ECB6274A705800EFBF0C /* AppDelegate.swift */; };
 		FD87ECC3274A705B00EFBF0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD87ECC2274A705B00EFBF0C /* Assets.xcassets */; };
 		FD87ECC6274A705B00EFBF0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD87ECC4274A705B00EFBF0C /* LaunchScreen.storyboard */; };
@@ -71,6 +77,12 @@
 		AB39B745A907CC601D420558 /* Pods_NasaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NasaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB8A3A81D547DA7B2F814D7E /* Pods-Nasa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nasa.debug.xcconfig"; path = "Target Support Files/Pods-Nasa/Pods-Nasa.debug.xcconfig"; sourceTree = "<group>"; };
 		F13D26036D15EEBA0E09BCCE /* Pods-Nasa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nasa.release.xcconfig"; path = "Target Support Files/Pods-Nasa/Pods-Nasa.release.xcconfig"; sourceTree = "<group>"; };
+		FD76A30E274CE14F008F754D /* Items.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Items.json; sourceTree = "<group>"; };
+		FD76A310274CE252008F754D /* MockAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIClient.swift; sourceTree = "<group>"; };
+		FD76A314274CE3D3008F754D /* JsonLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonLocalDataSource.swift; sourceTree = "<group>"; };
+		FD76A316274CE539008F754D /* MockRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRemoteDataSource.swift; sourceTree = "<group>"; };
+		FD76A319274CE688008F754D /* TestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModel.swift; sourceTree = "<group>"; };
+		FD76A31B274CF3FD008F754D /* URLResponse+Nasa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLResponse+Nasa.swift"; sourceTree = "<group>"; };
 		FD87ECB3274A705800EFBF0C /* Nasa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nasa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD87ECB6274A705800EFBF0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD87ECC2274A705B00EFBF0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -207,6 +219,11 @@
 			isa = PBXGroup;
 			children = (
 				FD87ECD0274A705B00EFBF0C /* NasaTests.swift */,
+				FD76A30E274CE14F008F754D /* Items.json */,
+				FD76A310274CE252008F754D /* MockAPIClient.swift */,
+				FD76A314274CE3D3008F754D /* JsonLocalDataSource.swift */,
+				FD76A316274CE539008F754D /* MockRemoteDataSource.swift */,
+				FD76A319274CE688008F754D /* TestViewModel.swift */,
 			);
 			path = NasaTests;
 			sourceTree = "<group>";
@@ -280,6 +297,7 @@
 				FD8EA833274B9C7700D7A11D /* UIViewController+Nasa.swift */,
 				FD8EA837274B9EE600D7A11D /* UIView+Nasa.swift */,
 				FD8EA83B274BA5E200D7A11D /* UITableView+Nasa.swift */,
+				FD76A31B274CF3FD008F754D /* URLResponse+Nasa.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -405,6 +423,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD76A30F274CE150008F754D /* Items.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,6 +554,7 @@
 				FD87ECFA274A9C4600EFBF0C /* ControllerIds.swift in Sources */,
 				FD87ECEA274A95D900EFBF0C /* ImagesCell.swift in Sources */,
 				FD87ED10274AAD8400EFBF0C /* APIEndpoint.swift in Sources */,
+				FD76A31C274CF3FD008F754D /* URLResponse+Nasa.swift in Sources */,
 				FD87ED14274AADA600EFBF0C /* RemoteDataSource.swift in Sources */,
 				FD8EA832274B9C6300D7A11D /* UITableViewCell+Nasa.swift in Sources */,
 				FD87ECF4274A9AE700EFBF0C /* ImagesListViewModel.swift in Sources */,
@@ -557,6 +577,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD87ECD1274A705B00EFBF0C /* NasaTests.swift in Sources */,
+				FD76A315274CE3D3008F754D /* JsonLocalDataSource.swift in Sources */,
+				FD76A31A274CE688008F754D /* TestViewModel.swift in Sources */,
+				FD76A311274CE252008F754D /* MockAPIClient.swift in Sources */,
+				FD76A317274CE539008F754D /* MockRemoteDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

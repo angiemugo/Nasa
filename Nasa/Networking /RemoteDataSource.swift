@@ -8,7 +8,7 @@
 import RxSwift
 
 final class RemoteDataSource: DataSource {
-    let apiClient: APIClient
+    var apiClient: APIClientProtocol
 
     init(_ apiClient: APIClient = APIClient()) {
         self.apiClient = apiClient

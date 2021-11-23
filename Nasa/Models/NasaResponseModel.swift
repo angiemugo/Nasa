@@ -24,11 +24,11 @@ struct itemsResponse: Codable {
     }
 
     func toListUIModel() -> UIModel {
-        let dateString = Formatter.dateString(from: data.first?.dateCreated ?? "")
+        let dateString = Formatter.dateString(from: data.first?.dateCreated ?? Date())
         return UIModel(imageUrl: links.first?.href ?? "",
                        title: data.first?.title ?? "",
                        subtitle: computeSubtitle(data.first?.photographer ?? "",
-                                                 data.first?.dateCreated ?? ""),
+                                                 dateString),
                        description: data.first?.description ?? "")
     }
 }

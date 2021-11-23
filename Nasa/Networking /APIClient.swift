@@ -26,7 +26,7 @@ final class APIClient: APIClientProtocol {
 
     private func request<T: Decodable>(_ urlRequest: URLRequest,
                                        _ responseHandler: @escaping (T) -> Void,
-                                       _ errorHandler: @escaping ((_ error: NasaErrors) -> Void)) -> Disposable {
+                                       _ errorHandler: @escaping ((_ error: Error) -> Void)) -> Disposable {
         return URLSession
             .shared
             .rx
@@ -38,25 +38,29 @@ final class APIClient: APIClientProtocol {
                 guard let self = self else { return }
                 let statusCode = response.response.statusCode
                 if 200..<300 ~= statusCode {
-                    self.decodeResponse(response.response, response.data, responseHandler)
+                    do {
+                    try self.decodeResponse(response.response, response.data, responseHandler)
+                    } catch let error {
+                        errorHandler(NasaErrors.NetworkError.DecodingFailure(errorMessage: error.localizedDescription))
+                    }
                 } else {
-                    print("This is the error: \(statusCode)")
+                    errorHandler(response.response.statusError)
                 }
             }, onFailure: { _ in
-                errorHandler(.timeout)
+                errorHandler(NasaErrors.timeout)
             })
     }
 
     private func decodeResponse<T: Decodable>(_ response: HTTPURLResponse,
                                               _ data: Data,
-                                              _ responseHandler: @escaping (T) -> Void) {
+                                              _ responseHandler: @escaping (T) -> Void) throws {
         do {
             let decoder = JSONDecoder()
             decoder.dateDecodingStrategy = .formatted(Formatter.iso8601)
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             responseHandler(try decoder.decode(T.self, from: data))
-        } catch {
-            print("This is the error: \(error), \(T.self)")
+        } catch let error {
+            throw(error)
         }
     }
 }

@@ -14,7 +14,7 @@ final class ImageCell: UITableViewCell {
 
     func configureCell(_ model: UIModel) {
         guard let url = URL(string: model.imageUrl) else { return }
-        nasaImage.setImage(url)
+        nasaImage.loadImage(url)
         titleLabel.text = model.title
         subtitleLabel.text = model.subtitle
     }

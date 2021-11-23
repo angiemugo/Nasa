@@ -6,11 +6,33 @@
 //
 
 import UIKit
-import Kingfisher
+
+let imageCache = NSCache<AnyObject, AnyObject>()
+var imageURL: URL?
 
 extension UIImageView {
-    func setImage(_ url: URL) {
-        self.kf.setImage(with: url) 
+    func loadImage(_ url: URL) {
+        imageURL = url
+        image = nil 
+        if let imageFromCache = imageCache.object(forKey: url as AnyObject) as? UIImage {
+            self.image = imageFromCache
+            return
+        }
+
+        URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
+            if let error = error {
+                print("This is the error: \(error.localizedDescription)")
+                return
+            }
+            DispatchQueue.main.async {
+                if let data = data, let imageToCache = UIImage(data: data) {
+                    if imageURL == url {
+                        self.image = imageToCache
+                    }
+                    imageCache.setObject(imageToCache, forKey: url as AnyObject)
+                }
+            }
+        }).resume()
     }
 }
 
@@ -28,7 +50,7 @@ extension Formatter {
 
     static func dateString(from date: Date)-> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "YY, MMM d"
+        dateFormatter.dateFormat = "YY MMM, d"
         return dateFormatter.string(from: date)
     }
 }

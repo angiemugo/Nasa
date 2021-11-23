@@ -26,7 +26,7 @@ final class ImageDetailViewController: BaseViewController {
 
     func setup() {
         guard let url = URL(string: model.imageUrl) else { return }
-        nasaImage.setImage(url)
+        nasaImage.loadImage(url)
         titleLabel.text = model.title
         subtitleLabel.text = model.subtitle
         descriptionLabel.text = model.description

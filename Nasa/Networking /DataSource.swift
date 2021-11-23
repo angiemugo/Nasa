@@ -8,5 +8,6 @@
 import RxSwift
 
 protocol DataSource {
+    var apiClient: APIClientProtocol { get }
     func fetchNasaImages() -> Single<SearchResponse> 
 }
