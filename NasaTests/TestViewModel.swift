@@ -27,7 +27,8 @@ class TestViewModel: XCTestCase {
 
     func testGetItems() {
         mockClient?.fetchSuccess = true
-        let items = sut?.fetch()
+        sut?.fetch()
+        let items = sut?.items.value
         let firstItem = items!.first!
         XCTAssertEqual(items?.count, 4)
         XCTAssertEqual(firstItem.title, "ARC-2002-ACD02-0056-22")
@@ -37,7 +38,8 @@ class TestViewModel: XCTestCase {
     }
 
     func testFailure() {
-        let items = sut?.fetch()
+        sut?.fetch()
+        let items = sut?.items.value
         XCTAssertEqual(items?.count, 0)
     }
 }

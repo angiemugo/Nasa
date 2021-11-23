@@ -7,28 +7,57 @@
 
 import UIKit
 
+
+import UIKit
+
+enum Tags {
+    enum Loading: Int {
+        case defaultLoadingIndicator = 999999
+    }
+}
+
 extension UIView {
-    var loadingView: LoadingView {
-        return LoadingView(frame: bounds)
+    private var loadingIndicatorView: UIActivityIndicatorView {
+        let style: UIActivityIndicatorView.Style = .medium
+        let indicatorView = UIActivityIndicatorView(style: style)
+        indicatorView.translatesAutoresizingMaskIntoConstraints = false
+        return indicatorView
     }
 
-    func showLoading() {
+    func showLoading(tag: Tags.Loading = Tags.Loading.defaultLoadingIndicator, _ backgroundAlpha: CGFloat = 0.3) {
+        guard viewWithTag(tag.rawValue) == nil else {
+            if let loadingIndicator = viewWithTag(tag.rawValue) as? UIActivityIndicatorView {
+                loadingIndicator.startAnimating()
+            }
+            return
+        }
+
+        let height: CGFloat = 45
+        let loadingView = loadingIndicatorView
+        loadingView.tag = tag.rawValue
+        loadingView.layer.zPosition = CGFloat(Float.greatestFiniteMagnitude)
         addSubview(loadingView)
-        loadingView.pinToSuperview()
-    }
 
-    func hideLoading() {
-        loadingView.removeFromSuperview()
-    }
-
-    func pinToSuperview(withEdges edges: UIEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)) {
-        guard let superView = superview else { return }
-        translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            leadingAnchor.constraint(equalTo: superView.leadingAnchor, constant: edges.left),
-            trailingAnchor.constraint(equalTo: superView.trailingAnchor, constant: -edges.right),
-            topAnchor.constraint(equalTo: superView.topAnchor, constant: edges.top),
-            bottomAnchor.constraint(equalTo: superView.bottomAnchor, constant: -edges.bottom)
+            loadingView.widthAnchor.constraint(equalToConstant: height),
+            loadingView.heightAnchor.constraint(equalTo: loadingView.widthAnchor),
+            loadingView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            loadingView.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
+
+        layoutIfNeeded()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            loadingView.startAnimating()
+        }
+
+    }
+
+    func hideLoading(tag: Tags.Loading =  Tags.Loading.defaultLoadingIndicator) {
+        DispatchQueue.main.async(execute: { [weak self] in
+            guard let self = self else { return }
+            while self.viewWithTag(tag.rawValue) != nil {
+                self.viewWithTag(tag.rawValue)?.removeFromSuperview()
+            }
+        })
     }
 }

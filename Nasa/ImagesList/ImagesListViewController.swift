@@ -21,7 +21,7 @@ final class ImagesListViewController: BaseViewController {
         super.viewDidLoad()
         configureView()
         configureObservables()
-        viewModel.fetchItems()
+        viewModel.fetch()
     }
 
     private func configureView() {
@@ -61,7 +61,7 @@ final class ImagesListViewController: BaseViewController {
     func configureObservables() {
         viewModel.errorRelay.bind { [weak self] error in
             guard let self = self else { return }
-            self.showError(error, self.viewModel.fetchItems)
+            self.showError(error, self.viewModel.fetch)
         }.disposed(by: disposeBag)
         
         viewModel.loadingRelay.subscribe(onNext: { [weak self] loading in

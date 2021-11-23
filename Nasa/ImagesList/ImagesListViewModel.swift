@@ -22,20 +22,16 @@ class ImagesListViewModel: BaseViewModel {
         self.coordinator = nasaCoordinator
     }
 
-    func fetchItems() {
-        items.accept(fetch())
-    }
-
-    func fetch() -> [UIModel]{
-        var items = [UIModel]()
-        loadingRelay.accept(true)
-        dataSource.fetchNasaImages().subscribe { images in
-            let UIModel = images.collection.items.map { $0.toListUIModel() }
-            items = (UIModel)
-        } onFailure: { error in
-            self.errorRelay.accept(error)
-        }.disposed(by: disposeBag)
-        return items
+    func fetch() {
+        errorRelay.accept(NasaErrors.timeout)
+//        loadingRelay.accept(true)
+//        dataSource.fetchNasaImages().subscribe { images in
+//            self.loadingRelay.accept(false)
+//            let models = images.collection.items.map { $0.toListUIModel() }
+//            self.items.accept(models)
+//        } onFailure: { error in
+//            self.errorRelay.accept(error)
+//        }.disposed(by: disposeBag)
     }
 
     func goToDetail(_ row: Int, _ nav: UINavigationController) {
