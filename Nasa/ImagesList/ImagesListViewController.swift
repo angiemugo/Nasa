@@ -45,12 +45,12 @@ final class ImagesListViewController: BaseViewController {
         }.disposed(by: disposeBag)
     }
     
-    func showDetail(_ indexPath: Int) {
+    private func showDetail(_ indexPath: Int) {
         guard let nav = navigationController else { return }
         viewModel.goToDetail(indexPath, nav)
     }
     
-    func configureTableViewCell(indexPath: IndexPath, model: UIModel) -> UITableViewCell {
+    private func configureTableViewCell(indexPath: IndexPath, model: UIModel) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: ImageCell.identifier, for: indexPath) as? ImageCell {
             cell.configureCell(model)
             return cell
@@ -58,7 +58,7 @@ final class ImagesListViewController: BaseViewController {
         return UITableViewCell()
     }
     
-    func configureObservables() {
+    private func configureObservables() {
         viewModel.errorRelay.bind { [weak self] error in
             guard let self = self else { return }
             self.showError(error, self.viewModel.fetch)

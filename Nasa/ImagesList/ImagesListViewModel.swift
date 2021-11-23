@@ -23,15 +23,14 @@ class ImagesListViewModel: BaseViewModel {
     }
 
     func fetch() {
-        errorRelay.accept(NasaErrors.timeout)
-//        loadingRelay.accept(true)
-//        dataSource.fetchNasaImages().subscribe { images in
-//            self.loadingRelay.accept(false)
-//            let models = images.collection.items.map { $0.toListUIModel() }
-//            self.items.accept(models)
-//        } onFailure: { error in
-//            self.errorRelay.accept(error)
-//        }.disposed(by: disposeBag)
+        loadingRelay.accept(true)
+        dataSource.fetchNasaImages().subscribe { images in
+            self.loadingRelay.accept(false)
+            let models = images.collection.items.map { $0.toListUIModel() }
+            self.items.accept(models)
+        } onFailure: { error in
+            self.errorRelay.accept(error)
+        }.disposed(by: disposeBag)
     }
 
     func goToDetail(_ row: Int, _ nav: UINavigationController) {

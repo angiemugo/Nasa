@@ -20,6 +20,7 @@ extension UIView {
     private var loadingIndicatorView: UIActivityIndicatorView {
         let style: UIActivityIndicatorView.Style = .medium
         let indicatorView = UIActivityIndicatorView(style: style)
+        indicatorView.startAnimating()
         indicatorView.translatesAutoresizingMaskIntoConstraints = false
         return indicatorView
     }
