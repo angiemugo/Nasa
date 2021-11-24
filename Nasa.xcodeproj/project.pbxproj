@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B1A18B337E24B517456213D /* Pods_Nasa_NasaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3BB08599CF1B0E5388EC2CC /* Pods_Nasa_NasaUITests.framework */; };
 		C824FE6DC2F7D8B4C23197C6 /* Pods_Nasa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BFACCEACC6A106AA3045EC7 /* Pods_Nasa.framework */; };
 		FD76A30F274CE150008F754D /* Items.json in Resources */ = {isa = PBXBuildFile; fileRef = FD76A30E274CE14F008F754D /* Items.json */; };
 		FD76A311274CE252008F754D /* MockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD76A310274CE252008F754D /* MockAPIClient.swift */; };
@@ -46,18 +45,12 @@
 		FD9812C9274BBAF5002AB1FA /* NasaCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9812C8274BBAF5002AB1FA /* NasaCoordinator.swift */; };
 		FD9812CB274BBB90002AB1FA /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9812CA274BBB90002AB1FA /* DataSource.swift */; };
 		FDC37A2CD0F98B9F4A264947 /* Pods_NasaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB39B745A907CC601D420558 /* Pods_NasaTests.framework */; };
+		FDCFFECA274E487300787872 /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCFFEC9274E487300787872 /* CoordinatorTests.swift */; };
 		FDDCF5F1274D032A00ECA38C /* Date+Nasa.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDCF5F0274D032A00ECA38C /* Date+Nasa.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		FD87ECCD274A705B00EFBF0C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FD87ECAB274A705800EFBF0C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FD87ECB2274A705800EFBF0C;
-			remoteInfo = Nasa;
-		};
-		FD87ECD7274A705C00EFBF0C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FD87ECAB274A705800EFBF0C /* Project object */;
 			proxyType = 1;
@@ -89,7 +82,6 @@
 		FD87ECC7274A705B00EFBF0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD87ECCC274A705B00EFBF0C /* NasaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NasaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD87ECD0274A705B00EFBF0C /* NasaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaTests.swift; sourceTree = "<group>"; };
-		FD87ECD6274A705C00EFBF0C /* NasaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NasaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD87ECE9274A95D900EFBF0C /* ImagesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCell.swift; sourceTree = "<group>"; };
 		FD87ECEB274A964300EFBF0C /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
 		FD87ECED274A9A2900EFBF0C /* ImagesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesListViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +108,7 @@
 		FD8EA83B274BA5E200D7A11D /* UITableView+Nasa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Nasa.swift"; sourceTree = "<group>"; };
 		FD9812C8274BBAF5002AB1FA /* NasaCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaCoordinator.swift; sourceTree = "<group>"; };
 		FD9812CA274BBB90002AB1FA /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		FDCFFEC9274E487300787872 /* CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
 		FDDCF5F0274D032A00ECA38C /* Date+Nasa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Nasa.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,14 +126,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDC37A2CD0F98B9F4A264947 /* Pods_NasaTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FD87ECD3274A705C00EFBF0C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0B1A18B337E24B517456213D /* Pods_Nasa_NasaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,7 +171,6 @@
 			children = (
 				FD87ECB3274A705800EFBF0C /* Nasa.app */,
 				FD87ECCC274A705B00EFBF0C /* NasaTests.xctest */,
-				FD87ECD6274A705C00EFBF0C /* NasaUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -221,6 +205,7 @@
 				FD76A314274CE3D3008F754D /* JsonLocalDataSource.swift */,
 				FD76A316274CE539008F754D /* MockRemoteDataSource.swift */,
 				FD76A319274CE688008F754D /* TestViewModel.swift */,
+				FDCFFEC9274E487300787872 /* CoordinatorTests.swift */,
 			);
 			path = NasaTests;
 			sourceTree = "<group>";
@@ -332,26 +317,6 @@
 			productReference = FD87ECCC274A705B00EFBF0C /* NasaTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		FD87ECD5274A705C00EFBF0C /* NasaUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FD87ECE6274A705C00EFBF0C /* Build configuration list for PBXNativeTarget "NasaUITests" */;
-			buildPhases = (
-				BE51B18447E6318F9E6ED32D /* [CP] Check Pods Manifest.lock */,
-				FD87ECD2274A705C00EFBF0C /* Sources */,
-				FD87ECD3274A705C00EFBF0C /* Frameworks */,
-				FD87ECD4274A705C00EFBF0C /* Resources */,
-				08238C2FEB4CB9641A1C88A8 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FD87ECD8274A705C00EFBF0C /* PBXTargetDependency */,
-			);
-			name = NasaUITests;
-			productName = NasaUITests;
-			productReference = FD87ECD6274A705C00EFBF0C /* NasaUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -366,10 +331,6 @@
 						CreatedOnToolsVersion = 13.0;
 					};
 					FD87ECCB274A705B00EFBF0C = {
-						CreatedOnToolsVersion = 13.0;
-						TestTargetID = FD87ECB2274A705800EFBF0C;
-					};
-					FD87ECD5274A705C00EFBF0C = {
 						CreatedOnToolsVersion = 13.0;
 						TestTargetID = FD87ECB2274A705800EFBF0C;
 					};
@@ -390,7 +351,6 @@
 			targets = (
 				FD87ECB2274A705800EFBF0C /* Nasa */,
 				FD87ECCB274A705B00EFBF0C /* NasaTests */,
-				FD87ECD5274A705C00EFBF0C /* NasaUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -416,33 +376,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FD87ECD4274A705C00EFBF0C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		08238C2FEB4CB9641A1C88A8 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Nasa-NasaUITests/Pods-Nasa-NasaUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Nasa-NasaUITests/Pods-Nasa-NasaUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Nasa-NasaUITests/Pods-Nasa-NasaUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		08DF0F63654831A77ABB5501 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -504,28 +440,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BE51B18447E6318F9E6ED32D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Nasa-NasaUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -568,16 +482,10 @@
 			files = (
 				FD87ECD1274A705B00EFBF0C /* NasaTests.swift in Sources */,
 				FD76A315274CE3D3008F754D /* JsonLocalDataSource.swift in Sources */,
+				FDCFFECA274E487300787872 /* CoordinatorTests.swift in Sources */,
 				FD76A31A274CE688008F754D /* TestViewModel.swift in Sources */,
 				FD76A311274CE252008F754D /* MockAPIClient.swift in Sources */,
 				FD76A317274CE539008F754D /* MockRemoteDataSource.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FD87ECD2274A705C00EFBF0C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,11 +496,6 @@
 			isa = PBXTargetDependency;
 			target = FD87ECB2274A705800EFBF0C /* Nasa */;
 			targetProxy = FD87ECCD274A705B00EFBF0C /* PBXContainerItemProxy */;
-		};
-		FD87ECD8274A705C00EFBF0C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FD87ECB2274A705800EFBF0C /* Nasa */;
-			targetProxy = FD87ECD7274A705C00EFBF0C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -828,52 +731,6 @@
 			};
 			name = Release;
 		};
-		FD87ECE7274A705C00EFBF0C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7733EF76FB3026737A209208 /* Pods-Nasa-NasaUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = nnn.NasaUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Nasa;
-			};
-			name = Debug;
-		};
-		FD87ECE8274A705C00EFBF0C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61124340F09366D74B14459A /* Pods-Nasa-NasaUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = nnn.NasaUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Nasa;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -900,15 +757,6 @@
 			buildConfigurations = (
 				FD87ECE4274A705C00EFBF0C /* Debug */,
 				FD87ECE5274A705C00EFBF0C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FD87ECE6274A705C00EFBF0C /* Build configuration list for PBXNativeTarget "NasaUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FD87ECE7274A705C00EFBF0C /* Debug */,
-				FD87ECE8274A705C00EFBF0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

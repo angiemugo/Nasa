@@ -7,22 +7,26 @@
 
 import Foundation
 import XCTest
+import RxSwift
 @testable import Nasa
 
 class TestViewModel: XCTestCase {
     var sut: ImagesListViewModel?
     var mockClient: MockAPIClient?
+    var disposeBag: DisposeBag?
 
     override func setUp() {
         super.setUp()
         mockClient = MockAPIClient()
         let dataSource = MockRemoteDataSource(mockClient!)
         sut = ImagesListViewModel(dataSource)
+        disposeBag = DisposeBag()
     }
 
     override func tearDown() {
         super.tearDown()
         sut = nil
+        disposeBag = nil
     }
 
     func testGetItems() {
@@ -41,5 +45,8 @@ class TestViewModel: XCTestCase {
         sut?.fetch()
         let items = sut?.items.value
         XCTAssertEqual(items?.count, 0)
+        sut?.errorRelay.subscribe(onNext: { error in
+            XCTAssert(error is NasaErrors.NetworkError)
+        }).disposed(by: disposeBag!)
     }
 }

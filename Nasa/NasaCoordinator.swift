@@ -8,7 +8,7 @@
 import UIKit
 
 class NasaCoordinator {
-    private var navigationController: UINavigationController
+    var navigationController: UINavigationController
 
     init(_ navigationController: UINavigationController) {
         self.navigationController = navigationController

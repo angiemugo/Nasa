@@ -12,7 +12,7 @@ final class ImageDetailViewController: BaseViewController {
     @IBOutlet private var titleLabel: UILabel!
     @IBOutlet private var subtitleLabel: UILabel!
     @IBOutlet private var descriptionLabel: UILabel!
-    private let model: UIModel
+    let model: UIModel
 
     init(_ model: UIModel) {
         self.model = model
