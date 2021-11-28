@@ -19,9 +19,9 @@ final class ImagesListViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureView()
         configureObservables()
         viewModel.fetch()
+        configureView()
     }
 
     private func configureView() {
