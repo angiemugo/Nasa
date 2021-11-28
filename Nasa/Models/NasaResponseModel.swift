@@ -24,7 +24,7 @@ struct itemsResponse: Codable {
     }
 
     func toListUIModel() -> UIModel {
-        let dateString = Formatter.dateString(from: data.first?.dateCreated ?? Date())
+        let dateString = data.first?.dateCreated.dateString() ?? ""
         return UIModel(imageUrl: links.first?.href ?? "",
                        title: data.first?.title ?? "",
                        subtitle: computeSubtitle(data.first?.photographer ?? "",
