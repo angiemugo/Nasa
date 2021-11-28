@@ -28,7 +28,7 @@ final class ImagesListViewController: BaseViewController {
         title = "The Milky Way"
         configureTableView()
     }
-    
+
     private func configureTableView() {
         tableView.tableFooterView = UIView()
         tableView.register(ImageCell.identifier)

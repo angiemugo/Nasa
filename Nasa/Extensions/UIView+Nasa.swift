@@ -45,7 +45,6 @@ extension UIView {
             loadingView.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
 
-        layoutIfNeeded()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             loadingView.startAnimating()
         }
