@@ -56,7 +56,7 @@ final class APIClient: APIClientProtocol {
                                               _ responseHandler: @escaping (T) -> Void) throws {
         do {
             let decoder = JSONDecoder()
-            decoder.dateDecodingStrategy = .formatted(Formatter.iso8601)
+            decoder.dateDecodingStrategy = .iso8601
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             responseHandler(try decoder.decode(T.self, from: data))
         } catch let error {

@@ -19,16 +19,16 @@ final class ImagesListViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureView()
         configureObservables()
         viewModel.fetch()
+        configureView()
     }
 
     private func configureView() {
         title = "The Milky Way"
         configureTableView()
     }
-    
+
     private func configureTableView() {
         tableView.tableFooterView = UIView()
         tableView.register(ImageCell.identifier)
@@ -59,11 +59,11 @@ final class ImagesListViewController: BaseViewController {
     }
     
     private func configureObservables() {
-        viewModel.errorRelay.bind { [weak self] error in
+        viewModel.errorRelay.subscribe(onNext: { [weak self] error in
             guard let self = self else { return }
             self.showError(error, self.viewModel.fetch)
-        }.disposed(by: disposeBag)
-        
+        }).disposed(by: disposeBag)
+
         viewModel.loadingRelay.subscribe(onNext: { [weak self] loading in
             guard let self = self else { return }
             loading ? self.showLoading() : self.hideLoading()

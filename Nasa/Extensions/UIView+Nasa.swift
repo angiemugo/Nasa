@@ -20,7 +20,6 @@ extension UIView {
     private var loadingIndicatorView: UIActivityIndicatorView {
         let style: UIActivityIndicatorView.Style = .medium
         let indicatorView = UIActivityIndicatorView(style: style)
-        indicatorView.startAnimating()
         indicatorView.translatesAutoresizingMaskIntoConstraints = false
         return indicatorView
     }
@@ -46,19 +45,16 @@ extension UIView {
             loadingView.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
 
-        layoutIfNeeded()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             loadingView.startAnimating()
         }
-
     }
 
     func hideLoading(tag: Tags.Loading =  Tags.Loading.defaultLoadingIndicator) {
-        DispatchQueue.main.async(execute: { [weak self] in
-            guard let self = self else { return }
+        DispatchQueue.main.async {
             while self.viewWithTag(tag.rawValue) != nil {
                 self.viewWithTag(tag.rawValue)?.removeFromSuperview()
             }
-        })
+        }
     }
 }

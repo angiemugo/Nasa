@@ -13,7 +13,9 @@ extension UIViewController {
     }
     
     func hideLoading() {
-        view.hideLoading()
+        DispatchQueue.main.async {
+            self.view.hideLoading()
+        }
     }
     
     func showError(_ error: Error, _ retry: @escaping () -> Void) {
